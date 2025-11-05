@@ -1,10 +1,4 @@
 import { useEffect } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
 import ContactForm from "@/components/site/ContactForm";
 
 export default function Index() {
