@@ -692,7 +692,6 @@ export default function Index() {
         </div>
       </section>
 
-
       {/* Contact */}
       <section id="contact" className="py-24 scroll-mt-24 bg-white">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
