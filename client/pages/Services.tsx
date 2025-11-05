@@ -50,11 +50,11 @@ export default function Services() {
     },
     {
       n: "07",
-      t: "AI CCTV Solution",
-      d: "Intelligent video surveillance powered by AI for real-time threat detection, automated monitoring, and enhanced security insights.",
-      paths: ["M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"],
+      t: "Dedicated Development Teams",
+      d: "Access skilled developers and dedicated engineers tailored to your project needs, providing flexible staffing solutions with deep technical expertise.",
+      paths: ["M12 4.354a4 4 0 110 5.292M15 10H9m6 0a9 9 0 11-18 0 9 9 0 0118 0z","M17 9l-5 5m0 0l-5-5m5 5v6"],
       color: "from-primary to-primary",
-      features: ["AI-powered detection", "Real-time alerts", "24/7 monitoring", "Advanced analytics"]
+      features: ["Skilled developers", "Flexible staffing", "Agile teams", "Dedicated support"]
     },
     {
       n: "08",
