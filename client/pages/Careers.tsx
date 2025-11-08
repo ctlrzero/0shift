@@ -291,18 +291,51 @@ export default function Careers() {
                 </>
               )}
 
-              {/* Submit Button */}
-              <div className="pt-6">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-gradient-to-r from-primary to-primary/90 text-white font-semibold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {loading ? "Submitting..." : "Submit Application"}
-                </button>
+              {/* Navigation Buttons */}
+              <div className="pt-8 flex gap-4">
+                {currentStep > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => setCurrentStep(currentStep - 1)}
+                    className="flex-1 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-semibold hover:bg-slate-50 transition-all duration-200"
+                  >
+                    ← Previous
+                  </button>
+                )}
+                {currentStep < totalSteps ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (currentStep === 1 && (!formData.fullName || !formData.email || !formData.phone)) {
+                        toast({ title: "Error", description: "Please fill in all fields", variant: "destructive" });
+                        return;
+                      }
+                      if (currentStep === 2 && (!formData.position || !formData.motivation)) {
+                        toast({ title: "Error", description: "Please fill in all fields", variant: "destructive" });
+                        return;
+                      }
+                      if (currentStep === 3 && !cvFile) {
+                        toast({ title: "Error", description: "Please upload your CV", variant: "destructive" });
+                        return;
+                      }
+                      setCurrentStep(currentStep + 1);
+                    }}
+                    className="flex-1 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                  >
+                    Next →
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={loading || !formData.ideas}
+                    className="flex-1 px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/90 text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {loading ? "Submitting..." : "Submit Application"}
+                  </button>
+                )}
               </div>
 
-              <p className="text-xs text-slate-500 text-center">
+              <p className="text-xs text-slate-500 text-center pt-6">
                 Your information will be securely processed and used only for recruitment purposes.
               </p>
             </form>
