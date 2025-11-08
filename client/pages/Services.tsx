@@ -151,7 +151,7 @@ export default function Services() {
                     ))}
                   </ul>
 
-                  <a href="#contact" className="mt-6 group/link inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
+                  <a href="/#contact" className="mt-6 group/link inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
                     Learn more
                     <svg className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -180,7 +180,7 @@ export default function Services() {
 
               <div className="flex items-center justify-center gap-4 flex-wrap">
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="group inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 text-sm font-semibold text-primary shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
                 >
                   Schedule Consultation
