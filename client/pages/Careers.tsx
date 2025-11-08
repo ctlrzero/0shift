@@ -17,7 +17,11 @@ export default function Careers() {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -53,7 +57,8 @@ export default function Careers() {
       if (response.ok) {
         toast({
           title: "Application Submitted",
-          description: "Thank you for your interest! We'll review your application and get back to you soon.",
+          description:
+            "Thank you for your interest! We'll review your application and get back to you soon.",
         });
         setFormData({
           fullName: "",
@@ -100,18 +105,37 @@ export default function Careers() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-8">
-              Build the Future With <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Zero Shift</span>
+              Build the Future With{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Zero Shift
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 leading-8">
-              We're looking for passionate professionals who are excited about solving complex challenges through intelligent design and cutting-edge technology. If you're ready to make an impact, we'd love to hear from you.
+              We're looking for passionate professionals who are excited about
+              solving complex challenges through intelligent design and
+              cutting-edge technology. If you're ready to make an impact, we'd
+              love to hear from you.
             </p>
 
             <div className="mt-8">
-              <a href="#application-form" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-200 hover:-translate-y-0.5">
+              <a
+                href="#application-form"
+                className="group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-200 hover:-translate-y-0.5"
+              >
                 Start Your Application
-                <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg
+                  className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
                 </svg>
               </a>
             </div>
@@ -119,11 +143,18 @@ export default function Careers() {
         </div>
       </section>
 
-      <section id="application-form" className="py-16 md:py-24 bg-white scroll-mt-24">
+      <section
+        id="application-form"
+        className="py-16 md:py-24 bg-white scroll-mt-24"
+      >
         <div className="mx-auto max-w-3xl px-5 md:px-10">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Application Process</h2>
-            <p className="text-slate-600">We make it easy to apply. Complete this {totalSteps}-step process.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+              Application Process
+            </h2>
+            <p className="text-slate-600">
+              We make it easy to apply. Complete this {totalSteps}-step process.
+            </p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 md:p-12">
@@ -131,23 +162,32 @@ export default function Careers() {
               <div className="flex justify-between mb-4">
                 {Array.from({ length: totalSteps }).map((_, i) => (
                   <div key={i} className="flex flex-col items-center flex-1">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
-                      currentStep > i + 1
-                        ? "bg-primary text-white"
-                        : currentStep === i + 1
-                        ? "bg-primary text-white ring-2 ring-primary/30"
-                        : "bg-slate-100 text-slate-600"
-                    }`}>
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
+                        currentStep > i + 1
+                          ? "bg-primary text-white"
+                          : currentStep === i + 1
+                            ? "bg-primary text-white ring-2 ring-primary/30"
+                            : "bg-slate-100 text-slate-600"
+                      }`}
+                    >
                       {currentStep > i + 1 ? "✓" : i + 1}
                     </div>
-                    <p className={`text-xs mt-2 font-medium ${currentStep === i + 1 ? "text-primary" : "text-slate-600"}`}>
+                    <p
+                      className={`text-xs mt-2 font-medium ${currentStep === i + 1 ? "text-primary" : "text-slate-600"}`}
+                    >
                       {["Personal", "Position", "Documents", "Thoughts"][i]}
                     </p>
                   </div>
                 ))}
               </div>
               <div className="h-1 bg-slate-200 rounded-full overflow-hidden">
-                <div className={`h-full bg-gradient-to-r from-primary to-primary/80 transition-all duration-500`} style={{width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%`}} />
+                <div
+                  className={`h-full bg-gradient-to-r from-primary to-primary/80 transition-all duration-500`}
+                  style={{
+                    width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%`,
+                  }}
+                />
               </div>
             </div>
 
@@ -155,10 +195,15 @@ export default function Careers() {
               {/* Step 1: Personal Information */}
               {currentStep === 1 && (
                 <>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Tell us about yourself</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                    Tell us about yourself
+                  </h3>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="fullName" className="block text-sm font-semibold text-slate-900 mb-2">
+                      <label
+                        htmlFor="fullName"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -173,7 +218,10 @@ export default function Careers() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
                         Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -188,7 +236,10 @@ export default function Careers() {
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -208,11 +259,17 @@ export default function Careers() {
               {/* Step 2: Position & Motivation */}
               {currentStep === 2 && (
                 <>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Which role interests you?</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                    Which role interests you?
+                  </h3>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="position" className="block text-sm font-semibold text-slate-900 mb-2">
-                        Position of Interest <span className="text-red-500">*</span>
+                      <label
+                        htmlFor="position"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
+                        Position of Interest{" "}
+                        <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -226,8 +283,12 @@ export default function Careers() {
                     </div>
 
                     <div>
-                      <label htmlFor="motivation" className="block text-sm font-semibold text-slate-900 mb-2">
-                        Why do you want to join Zero Shift? <span className="text-red-500">*</span>
+                      <label
+                        htmlFor="motivation"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
+                        Why do you want to join Zero Shift?{" "}
+                        <span className="text-red-500">*</span>
                       </label>
                       <textarea
                         id="motivation"
@@ -246,10 +307,15 @@ export default function Careers() {
               {/* Step 3: Documents */}
               {currentStep === 3 && (
                 <>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Upload your documents</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                    Upload your documents
+                  </h3>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="cv" className="block text-sm font-semibold text-slate-900 mb-2">
+                      <label
+                        htmlFor="cv"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
                         Upload Your CV <span className="text-red-500">*</span>
                       </label>
                       <div className="relative">
@@ -262,8 +328,14 @@ export default function Careers() {
                           className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary/90 cursor-pointer"
                         />
                       </div>
-                      <p className="text-xs text-slate-500 mt-2">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
-                      {cvFile && <p className="text-sm text-primary mt-2">✓ {cvFile.name} selected</p>}
+                      <p className="text-xs text-slate-500 mt-2">
+                        Accepted formats: PDF, DOC, DOCX (Max 5MB)
+                      </p>
+                      {cvFile && (
+                        <p className="text-sm text-primary mt-2">
+                          ✓ {cvFile.name} selected
+                        </p>
+                      )}
                     </div>
                   </div>
                 </>
@@ -272,11 +344,17 @@ export default function Careers() {
               {/* Step 4: Final Thoughts */}
               {currentStep === 4 && (
                 <>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">Share your vision</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                    Share your vision
+                  </h3>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="ideas" className="block text-sm font-semibold text-slate-900 mb-2">
-                        What ideas do you have? <span className="text-red-500">*</span>
+                      <label
+                        htmlFor="ideas"
+                        className="block text-sm font-semibold text-slate-900 mb-2"
+                      >
+                        What ideas do you have?{" "}
+                        <span className="text-red-500">*</span>
                       </label>
                       <textarea
                         id="ideas"
@@ -307,16 +385,36 @@ export default function Careers() {
                   <button
                     type="button"
                     onClick={() => {
-                      if (currentStep === 1 && (!formData.fullName || !formData.email || !formData.phone)) {
-                        toast({ title: "Error", description: "Please fill in all fields", variant: "destructive" });
+                      if (
+                        currentStep === 1 &&
+                        (!formData.fullName ||
+                          !formData.email ||
+                          !formData.phone)
+                      ) {
+                        toast({
+                          title: "Error",
+                          description: "Please fill in all fields",
+                          variant: "destructive",
+                        });
                         return;
                       }
-                      if (currentStep === 2 && (!formData.position || !formData.motivation)) {
-                        toast({ title: "Error", description: "Please fill in all fields", variant: "destructive" });
+                      if (
+                        currentStep === 2 &&
+                        (!formData.position || !formData.motivation)
+                      ) {
+                        toast({
+                          title: "Error",
+                          description: "Please fill in all fields",
+                          variant: "destructive",
+                        });
                         return;
                       }
                       if (currentStep === 3 && !cvFile) {
-                        toast({ title: "Error", description: "Please upload your CV", variant: "destructive" });
+                        toast({
+                          title: "Error",
+                          description: "Please upload your CV",
+                          variant: "destructive",
+                        });
                         return;
                       }
                       setCurrentStep(currentStep + 1);
@@ -337,7 +435,8 @@ export default function Careers() {
               </div>
 
               <p className="text-xs text-slate-500 text-center pt-6">
-                Your information will be securely processed and used only for recruitment purposes.
+                Your information will be securely processed and used only for
+                recruitment purposes.
               </p>
             </form>
           </div>
@@ -346,34 +445,51 @@ export default function Careers() {
 
       <section id="benefits" className="py-16 bg-slate-50 scroll-mt-24">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">Why Join Zero Shift?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+            Why Join Zero Shift?
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Solve Complex Challenges",
                 desc: "Work on meaningful projects that impact global organizations and drive real transformation.",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z"
+                icon: "M13 10V3L4 14h7v7l9-11h-7z",
               },
               {
                 title: "Grow Your Skills",
                 desc: "Learn from industry experts and stay at the forefront of technology and design innovation.",
-                icon: "M12 6.253v13m0-13C6.596 6.253 2 10.849 2 16.5S6.596 26.75 12 26.75s10-4.597 10-10.25S17.404 6.253 12 6.253z"
+                icon: "M12 6.253v13m0-13C6.596 6.253 2 10.849 2 16.5S6.596 26.75 12 26.75s10-4.597 10-10.25S17.404 6.253 12 6.253z",
               },
               {
                 title: "Collaborative Culture",
                 desc: "Join a passionate team that values creativity, innovation, and continuous improvement.",
-                icon: "M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM4.318 20H3c-1.1 0-2-1-2-2.172A3 3 0 015.172 15h.856m13.728-2h.856a3 3 0 013.856 3.172c0 1.172-.9 2-2 2h-1.318"
+                icon: "M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM4.318 20H3c-1.1 0-2-1-2-2.172A3 3 0 015.172 15h.856m13.728-2h.856a3 3 0 013.856 3.172c0 1.172-.9 2-2 2h-1.318",
               },
             ].map((item, idx) => (
-              <div key={idx} className="group relative bg-white rounded-3xl p-8 md:p-10 border border-slate-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div
+                key={idx}
+                className="group relative bg-white rounded-3xl p-8 md:p-10 border border-slate-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d={item.icon}
+                      />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    {item.title}
+                  </h3>
                   <p className="text-slate-600 leading-7">{item.desc}</p>
                 </div>
               </div>

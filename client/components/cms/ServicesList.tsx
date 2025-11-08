@@ -28,7 +28,11 @@ export default function ServicesList({
   fallbackServices = [],
   onServicesLoad,
 }: ServicesListProps) {
-  const { data: cmsServices, isLoading, error } = useBuilderContent("service", {
+  const {
+    data: cmsServices,
+    isLoading,
+    error,
+  } = useBuilderContent("service", {
     limit: 100,
   });
 
@@ -36,7 +40,10 @@ export default function ServicesList({
     console.error("Failed to load CMS services:", error);
   }
 
-  const services = cmsServices && cmsServices.length > 0 ? (cmsServices as CMSService[]) : null;
+  const services =
+    cmsServices && cmsServices.length > 0
+      ? (cmsServices as CMSService[])
+      : null;
 
   if (services) {
     onServicesLoad?.(services);
@@ -74,10 +81,7 @@ export default function ServicesList({
             <div className="mb-6 flex items-center justify-between">
               <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/80 p-0.5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
                 <div className="flex h-full w-full items-center justify-center rounded-xl bg-white">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-8 w-8 fill-primary"
-                  >
+                  <svg viewBox="0 0 24 24" className="h-8 w-8 fill-primary">
                     <path d="M12 2l-5.5 9h11z" />
                   </svg>
                 </div>
