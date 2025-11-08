@@ -265,9 +265,9 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section id="benefits" className="py-16 bg-slate-50 scroll-mt-24">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why Work With Us?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">Why Join Zero Shift?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
