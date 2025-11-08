@@ -118,10 +118,37 @@ export default function Careers() {
         </div>
       </section>
 
-      <section id="application-form" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white scroll-mt-24">
-        <div className="mx-auto max-w-2xl px-5 md:px-10">
-          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Join Our Team</h2>
+      <section id="application-form" className="py-16 md:py-24 bg-white scroll-mt-24">
+        <div className="mx-auto max-w-3xl px-5 md:px-10">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Application Process</h2>
+            <p className="text-slate-600">We make it easy to apply. Complete this {totalSteps}-step process.</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 md:p-12">
+            <div className="mb-12">
+              <div className="flex justify-between mb-4">
+                {Array.from({ length: totalSteps }).map((_, i) => (
+                  <div key={i} className="flex flex-col items-center flex-1">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
+                      currentStep > i + 1
+                        ? "bg-primary text-white"
+                        : currentStep === i + 1
+                        ? "bg-primary text-white ring-2 ring-primary/30"
+                        : "bg-slate-100 text-slate-600"
+                    }`}>
+                      {currentStep > i + 1 ? "✓" : i + 1}
+                    </div>
+                    <p className={`text-xs mt-2 font-medium ${currentStep === i + 1 ? "text-primary" : "text-slate-600"}`}>
+                      {["Personal", "Position", "Documents", "Thoughts"][i]}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="h-1 bg-slate-200 rounded-full overflow-hidden">
+                <div className={`h-full bg-gradient-to-r from-primary to-primary/80 transition-all duration-500`} style={{width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%`}} />
+              </div>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Full Name */}
