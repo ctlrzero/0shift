@@ -273,19 +273,30 @@ export default function Careers() {
               {
                 title: "Solve Complex Challenges",
                 desc: "Work on meaningful projects that impact global organizations and drive real transformation.",
+                icon: "M13 10V3L4 14h7v7l9-11h-7z"
               },
               {
                 title: "Grow Your Skills",
                 desc: "Learn from industry experts and stay at the forefront of technology and design innovation.",
+                icon: "M12 6.253v13m0-13C6.596 6.253 2 10.849 2 16.5S6.596 26.75 12 26.75s10-4.597 10-10.25S17.404 6.253 12 6.253z"
               },
               {
                 title: "Collaborative Culture",
                 desc: "Join a passionate team that values creativity, innovation, and continuous improvement.",
+                icon: "M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM4.318 20H3c-1.1 0-2-1-2-2.172A3 3 0 015.172 15h.856m13.728-2h.856a3 3 0 013.856 3.172c0 1.172-.9 2-2 2h-1.318"
               },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-7">{item.desc}</p>
+              <div key={idx} className="group relative bg-white rounded-3xl p-8 md:p-10 border border-slate-200 hover:border-primary/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 leading-7">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
