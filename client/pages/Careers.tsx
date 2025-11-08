@@ -119,10 +119,10 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section id="application-form" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white scroll-mt-24">
         <div className="mx-auto max-w-2xl px-5 md:px-10">
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Application Form</h2>
+          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Join Our Team</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
