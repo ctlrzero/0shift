@@ -84,38 +84,34 @@ export default function Careers() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-24 md:py-32 lg:py-40">
-        <div className="absolute inset-0 bg-grid-white/[0.03] pointer-events-none" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -mr-48" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-20 md:py-28">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl -ml-40" />
 
         <div className="mx-auto max-w-screen-xl px-5 md:px-10 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm px-5 py-2.5 text-sm font-semibold text-primary mb-8 hover:bg-primary/15 transition-all duration-300">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-semibold text-primary mb-6 hover:bg-primary/12 transition-colors">
               <span className="relative flex h-2 w-2">
-                <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              We're Hiring Now
+              Join Our Team
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight mb-8 max-w-2xl">
-              Shape the Future of <span className="bg-gradient-to-r from-primary via-primary to-primary/80 bg-clip-text text-transparent">Enterprise Innovation</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-8">
+              Build the Future With <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Zero Shift</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-300 leading-8 max-w-2xl">
-              Join a team of passionate innovators tackling complex global challenges. We're building the next generation of intelligent solutions that transform businesses.
+            <p className="text-lg md:text-xl text-slate-600 leading-8">
+              We're looking for passionate professionals who are excited about solving complex challenges through intelligent design and cutting-edge technology. If you're ready to make an impact, we'd love to hear from you.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-10">
-              <a href="#application-form" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-200 hover:-translate-y-0.5">
-                Apply Now
+            <div className="mt-8">
+              <a href="#application-form" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-200 hover:-translate-y-0.5">
+                Start Your Application
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
-              <a href="#benefits" className="inline-flex items-center gap-2 rounded-lg border border-slate-600 bg-slate-800/50 backdrop-blur-sm px-7 py-3.5 text-sm font-semibold text-slate-100 hover:border-slate-500 hover:bg-slate-700/50 transition-all duration-200">
-                Learn More
               </a>
             </div>
           </div>
