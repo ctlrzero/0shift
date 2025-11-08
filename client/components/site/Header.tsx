@@ -24,7 +24,10 @@ export default function Header() {
     >
       <div className="mx-auto max-w-screen-xl px-5 md:px-10">
         <div className="flex h-16 items-center justify-between">
-          <a href="/" className="group flex items-center transition-opacity hover:opacity-80">
+          <a
+            href="/"
+            className="group flex items-center transition-opacity hover:opacity-80"
+          >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F4b7f413cb1bb44be90e35e6ae275f1c4%2Fa8e467b17bed496ea0756fdc9b79ed72?format=webp&width=800"
               alt="Zero Shift"
@@ -61,8 +64,18 @@ export default function Header() {
             className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             Request Demo
-            <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            <svg
+              className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
             </svg>
           </a>
         </div>
