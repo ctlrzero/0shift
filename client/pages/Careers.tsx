@@ -151,126 +151,145 @@ export default function Careers() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Full Name */}
-              <div>
-                <label htmlFor="fullName" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
+              {/* Step 1: Personal Information */}
+              {currentStep === 1 && (
+                <>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">Tell us about yourself</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label htmlFor="fullName" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                        placeholder="John Doe"
+                      />
+                    </div>
 
-              {/* Email */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Email Address <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
-                  placeholder="john@example.com"
-                />
-              </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                        placeholder="john@example.com"
+                      />
+                    </div>
 
-              {/* Phone */}
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Phone Number <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
-                  placeholder="+971 50 123 4567"
-                />
-              </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Phone Number <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                        placeholder="+971 50 123 4567"
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
 
-              {/* Position */}
-              <div>
-                <label htmlFor="position" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Position of Interest <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="position"
-                  name="position"
-                  value={formData.position}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
-                  placeholder="e.g., Senior Software Engineer, Product Designer, etc."
-                />
-              </div>
+              {/* Step 2: Position & Motivation */}
+              {currentStep === 2 && (
+                <>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">Which role interests you?</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label htmlFor="position" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Position of Interest <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="position"
+                        name="position"
+                        value={formData.position}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
+                        placeholder="e.g., Senior Software Engineer, Product Designer, etc."
+                      />
+                    </div>
 
-              {/* CV Upload */}
-              <div>
-                <label htmlFor="cv" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Upload Your CV <span className="text-red-500">*</span>
-                </label>
-                <div className="relative">
-                  <input
-                    type="file"
-                    id="cv"
-                    name="cv"
-                    onChange={handleFileChange}
-                    required
-                    accept=".pdf,.doc,.docx"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary/90 cursor-pointer"
-                  />
-                </div>
-                <p className="text-xs text-slate-500 mt-2">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
-              </div>
+                    <div>
+                      <label htmlFor="motivation" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Why do you want to join Zero Shift? <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        id="motivation"
+                        name="motivation"
+                        value={formData.motivation}
+                        onChange={handleInputChange}
+                        rows={4}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none"
+                        placeholder="Tell us about your interest in Zero Shift, what attracts you to our company..."
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
 
-              {/* Motivation */}
-              <div>
-                <label htmlFor="motivation" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Why do you want to join Zero Shift? <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="motivation"
-                  name="motivation"
-                  value={formData.motivation}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none"
-                  placeholder="Tell us about your interest in Zero Shift, what attracts you to our company, and what you hope to contribute..."
-                />
-              </div>
+              {/* Step 3: Documents */}
+              {currentStep === 3 && (
+                <>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">Upload your documents</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label htmlFor="cv" className="block text-sm font-semibold text-slate-900 mb-2">
+                        Upload Your CV <span className="text-red-500">*</span>
+                      </label>
+                      <div className="relative">
+                        <input
+                          type="file"
+                          id="cv"
+                          name="cv"
+                          onChange={handleFileChange}
+                          accept=".pdf,.doc,.docx"
+                          className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary/90 cursor-pointer"
+                        />
+                      </div>
+                      <p className="text-xs text-slate-500 mt-2">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                      {cvFile && <p className="text-sm text-primary mt-2">✓ {cvFile.name} selected</p>}
+                    </div>
+                  </div>
+                </>
+              )}
 
-              {/* Ideas */}
-              <div>
-                <label htmlFor="ideas" className="block text-sm font-semibold text-slate-900 mb-2">
-                  What ideas do you have? <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="ideas"
-                  name="ideas"
-                  value={formData.ideas}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none"
-                  placeholder="Share your ideas, innovations, or projects you'd like to work on. How do you see yourself contributing to our mission?"
-                />
-              </div>
+              {/* Step 4: Final Thoughts */}
+              {currentStep === 4 && (
+                <>
+                  <h3 className="text-xl font-bold text-slate-900 mb-6">Share your vision</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <label htmlFor="ideas" className="block text-sm font-semibold text-slate-900 mb-2">
+                        What ideas do you have? <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        id="ideas"
+                        name="ideas"
+                        value={formData.ideas}
+                        onChange={handleInputChange}
+                        rows={6}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all resize-none"
+                        placeholder="Share your ideas, innovations, or projects you'd like to work on. How do you see yourself contributing to our mission?"
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Submit Button */}
               <div className="pt-6">
