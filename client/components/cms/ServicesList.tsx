@@ -36,7 +36,7 @@ export default function ServicesList({
     console.error("Failed to load CMS services:", error);
   }
 
-  const services = cmsServices && cmsServices.length > 0 ? cmsServices : null;
+  const services = cmsServices && cmsServices.length > 0 ? (cmsServices as CMSService[]) : null;
 
   if (services) {
     onServicesLoad?.(services);
