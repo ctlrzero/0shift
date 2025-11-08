@@ -64,6 +64,7 @@ export default function Careers() {
           ideas: "",
         });
         setCvFile(null);
+        setCurrentStep(1);
       } else {
         toast({
           title: "Error",
