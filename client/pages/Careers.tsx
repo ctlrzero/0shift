@@ -124,7 +124,7 @@ export default function Careers() {
           <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Join Our Team</h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {/* Full Name */}
               <div>
                 <label htmlFor="fullName" className="block text-sm font-semibold text-slate-900 mb-2">
