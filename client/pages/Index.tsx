@@ -721,16 +721,6 @@ export default function Index() {
                     hello@zeroshift.ae
                   </a>
                 </div>
-                <div className="rounded-xl p-5 text-center">
-                  <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
-                    Office Location
-                  </div>
-                  <div className="text-slate-900 font-semibold text-sm">
-                    UAE, Dubai, Ras Alkhor
-                    <br />
-                    Almosawi Building Office 107
-                  </div>
-                </div>
               </div>
             </div>
           </div>
