@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BUILDER_API_KEY = import.meta.env.VITE_BUILDER_API_KEY;
+const BUILDER_API_KEY = import.meta.env.VITE_PUBLIC_BUILDER_KEY;
 const BUILDER_API_URL = "https://api.builder.io/v2/content";
 
 interface BuilderContent {
