@@ -3,6 +3,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 export default function Careers() {
   const { toast } = useToast();
+  const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -13,6 +14,8 @@ export default function Careers() {
     ideas: "",
   });
   const [cvFile, setCvFile] = useState<File | null>(null);
+
+  const totalSteps = 4;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
