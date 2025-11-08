@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <a href="/" className="group flex items-center transition-opacity hover:opacity-80">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F4252a0be31f14cb086de08c952d9b1ba%2F3e55556d144a4e80923f91892b05083f?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F4b7f413cb1bb44be90e35e6ae275f1c4%2Fa8e467b17bed496ea0756fdc9b79ed72?format=webp&width=800"
               alt="Zero Shift"
               className="h-10 w-auto transition-transform group-hover:scale-105"
             />
