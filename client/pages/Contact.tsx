@@ -23,46 +23,6 @@ export default function Contact() {
               platforms that transform operations, unlock efficiency, and enable intelligent growth.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a
-                href="/contact#how-we-work"
-                className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
-              >
-                Book a Strategy Call
-                <svg
-                  className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </a>
-              <a
-                href="/products"
-                className="group inline-flex items-center gap-2 rounded-lg border-2 border-primary/25 bg-white/50 backdrop-blur-sm px-7 py-3.5 text-sm font-semibold text-primary transition-all duration-200 hover:border-primary/50 hover:bg-primary/5"
-              >
-                Request a Demo
-                <svg
-                  className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
 
             <p className="text-sm text-slate-500 font-medium">
               Enterprise platforms • Cloud & AI • Secure by design
