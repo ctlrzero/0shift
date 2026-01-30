@@ -8,21 +8,28 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section id="hero-section" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-24">
+      <section id="hero-section" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-16 md:py-28">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/12 transition-colors">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              Enterprise Platform Consulting
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-8">
               Shift How You Build.{" "}
               <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                 Scale How You Operate.
               </span>
             </h1>
 
-            <p className="text-lg text-slate-600 leading-8 md:leading-9 mb-10 max-w-2xl">
-              ZeroShift partners with ambitious organizations to design, build, and scale digital 
+            <p className="text-lg md:text-xl text-slate-600 leading-8 md:leading-9 mb-10 max-w-2xl">
+              ZeroShift partners with ambitious organizations to design, build, and scale digital
               platforms that transform operations, unlock efficiency, and enable intelligent growth.
             </p>
-
 
             <p className="text-sm text-slate-500 font-medium">
               Enterprise platforms • Cloud & AI • Secure by design
