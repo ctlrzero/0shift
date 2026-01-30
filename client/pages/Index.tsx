@@ -1,11 +1,4 @@
 import { useEffect } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
-import ContactForm from "@/components/site/ContactForm";
 
 export default function Index() {
   useEffect(() => {
@@ -60,7 +53,7 @@ export default function Index() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Schedule Consultation
@@ -406,7 +399,7 @@ export default function Index() {
 
               <div className="pt-6 border-t border-slate-200">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Explore Integration Options
@@ -646,7 +639,7 @@ export default function Index() {
                   {s.d}
                 </p>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="mt-4 group/link inline-flex items-center gap-2 text-xs font-semibold text-primary hover:gap-3 transition-all"
                 >
                   Learn more
@@ -688,126 +681,6 @@ export default function Index() {
                 />
               </svg>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section
-        id="faq"
-        className="py-24 scroll-mt-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden"
-      >
-        <div className="absolute top-20 right-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
-
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-primary hover:bg-primary/12 transition-colors">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              FAQs
-            </div>
-            <h2 className="mt-8 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-              Common{" "}
-              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                questions
-              </span>
-            </h2>
-            <p className="mt-4 text-lg text-slate-600">
-              Quick answers to help you understand how we work
-            </p>
-          </div>
-          <div className="mx-auto max-w-3xl bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>
-                  How fast can we get to value?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Most clients see first release within 4–6 weeks and measurable
-                  impact in the first quarter.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  Do you integrate with our stack?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. We integrate with modern clouds, data platforms, and
-                  enterprise systems with security best practices.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  What about security and compliance?
-                </AccordionTrigger>
-                <AccordionContent>
-                  We follow strict SDLC, least-privilege access, and align with
-                  industry standards. We’ll map to your governance.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="py-24 scroll-mt-24 bg-white">
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white px-8 py-20 shadow-xl">
-            <div className="absolute inset-0 bg-grid-slate-100 [mask-image:radial-gradient(white,transparent)]" />
-
-            <div className="relative">
-              <div className="text-center mb-12">
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">
-                  Get In Touch
-                </div>
-
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
-                  Let's Talk
-                </h2>
-                <p className="mx-auto max-w-2xl text-lg text-slate-600 mb-4">
-                  Reach our team directly. We respond quickly and can tailor a
-                  conversation to your needs.
-                </p>
-              </div>
-
-              <ContactForm />
-
-              <div className="mt-12 border-t border-slate-200 pt-12 grid max-w-3xl gap-4 md:grid-cols-3 text-left mx-auto">
-                <div className="rounded-xl p-5 text-center">
-                  <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
-                    Email
-                  </div>
-                  <a
-                    href="mailto:hello@zeroshift.ae"
-                    className="text-slate-900 font-semibold hover:text-primary transition-colors"
-                  >
-                    hello@zeroshift.ae
-                  </a>
-                </div>
-                <div className="rounded-xl p-5 text-center">
-                  <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
-                    Office Location
-                  </div>
-                  <div className="text-slate-900 font-semibold text-sm">
-                    UAE, Dubai, Ras Alkhor
-                    <br />
-                    Almosawi Building Office 107
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
