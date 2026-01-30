@@ -76,28 +76,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Founder & Credibility */}
-      <section id="founder-credibility" className="py-24 bg-gradient-to-br from-slate-50 to-white">
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
-                Led by Experience.{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  Driven by Innovation.
-                </span>
-              </h2>
-
-              <p className="text-lg text-slate-600 leading-8 max-w-2xl mx-auto">
-                ZeroShift is built on deep experience delivering complex digital transformation
-                initiatives across large organizations. Our team brings decades of combined expertise
-                in enterprise architecture, cloud transformation, and intelligent systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section id="final-cta" className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80" />
