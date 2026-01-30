@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/site/Header";
 import Footer from "./components/site/Footer";
 import Index from "./pages/Index";
+import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
 import HowWeWork from "./pages/HowWeWork";
@@ -28,6 +29,7 @@ const App = () => (
           <main className="pt-16 md:pt-16">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/products" element={<Products />} />
               <Route path="/services" element={<Services />} />
               <Route path="/how-we-work" element={<HowWeWork />} />
