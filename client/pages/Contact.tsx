@@ -34,53 +34,6 @@ export default function Contact() {
         <div className="absolute bottom-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       </section>
 
-      {/* Who We Work With */}
-      <section id="who-we-work-with" className="py-20 bg-white">
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-16 text-center">
-            Built for Complex Organizations
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Government & Authorities",
-                desc: "Digital platforms, portals, and automation at scale",
-                icon: "M12 18a6 6 0 100-12 6 6 0 000 12z",
-              },
-              {
-                title: "Developers & Master Communities",
-                desc: "Property, licensing, and tenant-centric systems",
-                icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5.5m0 0H9.5m0 0H4m0 0h2",
-              },
-              {
-                title: "Enterprises & Holding Groups",
-                desc: "Operational systems that scale across entities",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z",
-              },
-              {
-                title: "Innovation-Driven Teams",
-                desc: "From MVP to mission-critical platforms",
-                icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5a4 4 0 100-8 4 4 0 000 8z",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
-                <p className="text-sm text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Core Value */}
       <section id="core-value" className="py-24 bg-slate-50">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
