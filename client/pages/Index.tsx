@@ -53,7 +53,7 @@ export default function Index() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="mailto:hello@zeroshift.ae"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Schedule Consultation
@@ -399,7 +399,7 @@ export default function Index() {
 
               <div className="pt-6 border-t border-slate-200">
                 <a
-                  href="mailto:hello@zeroshift.ae"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Explore Integration Options
@@ -639,7 +639,7 @@ export default function Index() {
                   {s.d}
                 </p>
                 <a
-                  href="mailto:hello@zeroshift.ae"
+                  href="/contact"
                   className="mt-4 group/link inline-flex items-center gap-2 text-xs font-semibold text-primary hover:gap-3 transition-all"
                 >
                   Learn more
