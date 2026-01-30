@@ -80,15 +80,7 @@ export default function Contact() {
       <section id="founder-credibility" className="py-24 bg-gradient-to-br from-slate-50 to-white">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-semibold text-primary mb-8">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                Our Expertise
-              </div>
-
+            <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
                 Led by Experience.{" "}
                 <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
@@ -101,22 +93,6 @@ export default function Contact() {
                 initiatives across large organizations. Our team brings decades of combined expertise
                 in enterprise architecture, cloud transformation, and intelligent systems.
               </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3 justify-center">
-              {[
-                "Enterprise Platforms",
-                "Digital Transformation",
-                "Cloud & AI",
-                "Secure Architecture",
-              ].map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block px-6 py-3 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-semibold hover:shadow-md transition-shadow"
-                >
-                  {tag}
-                </span>
-              ))}
             </div>
           </div>
         </div>
