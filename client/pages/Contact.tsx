@@ -184,41 +184,26 @@ export default function Contact() {
               explore how ZeroShift can help you move faster, smarter, and with confidence.
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            {/* Single consolidated email CTA */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-white/30 p-8 mb-6">
+              <p className="text-white/90 text-sm font-medium mb-4">
+                Get in touch with our team
+              </p>
               <a
                 href="mailto:hello@zeroshift.ae"
-                className="group inline-flex items-center gap-2 rounded-lg bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-lg shadow-black/20 transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
+                className="text-3xl md:text-4xl font-bold text-white hover:text-white/90 transition-colors"
               >
-                Book a Strategy Call
-                <svg
-                  className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </a>
-              <a
-                href="mailto:hello@zeroshift.ae"
-                className="group inline-flex items-center gap-2 rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-sm px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:border-white/50 hover:bg-white/20"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
                 hello@zeroshift.ae
               </a>
+              <p className="text-white/70 text-sm mt-4">
+                We typically respond within 24 hours
+              </p>
             </div>
+
+            {/* Optional: Additional contact methods or info */}
+            <p className="text-white/60 text-sm">
+              For urgent inquiries, feel free to call us directly or schedule a meeting through email.
+            </p>
           </div>
         </div>
       </section>
