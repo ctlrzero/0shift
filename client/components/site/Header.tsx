@@ -39,6 +39,7 @@ export default function Header() {
               { label: "Services", href: "/services", isExternal: false },
               { label: "Products", href: "/products", isExternal: false },
               { label: "How We Work", href: "/how-we-work", isExternal: false },
+              { label: "Contact", href: "/contact", isExternal: false },
             ].map((item) => {
               const active = isActive(item.href);
               return (
@@ -60,7 +61,7 @@ export default function Header() {
             })}
           </nav>
           <a
-            href="mailto:hello@zeroshift.ae"
+            href="/contact"
             className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             Request Demo
