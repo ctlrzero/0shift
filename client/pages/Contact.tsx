@@ -8,7 +8,10 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section id="hero-section" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-16 md:py-28">
+      <section
+        id="hero-section"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-16 md:py-28"
+      >
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/12 transition-colors">
@@ -27,8 +30,9 @@ export default function Contact() {
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 leading-8 md:leading-9 mb-10 max-w-2xl">
-              ZeroShift partners with ambitious organizations to design, build, and scale digital
-              platforms that transform operations, unlock efficiency, and enable intelligent growth.
+              ZeroShift partners with ambitious organizations to design, build,
+              and scale digital platforms that transform operations, unlock
+              efficiency, and enable intelligent growth.
             </p>
 
             <p className="text-sm text-slate-500 font-medium">
@@ -55,8 +59,9 @@ export default function Contact() {
             </h2>
 
             <p className="text-lg md:text-xl text-white/90 mb-16 leading-8">
-              Whether you're modernizing existing systems or building something entirely new, let's
-              explore how ZeroShift can help you move faster, smarter, and with confidence.
+              Whether you're modernizing existing systems or building something
+              entirely new, let's explore how ZeroShift can help you move
+              faster, smarter, and with confidence.
             </p>
 
             {/* Single consolidated email CTA */}
@@ -77,7 +82,8 @@ export default function Contact() {
 
             {/* Additional contact methods or info */}
             <p className="text-white/60 text-sm max-w-xl mx-auto">
-              For urgent inquiries, feel free to reach out directly through email or schedule a consultation.
+              For urgent inquiries, feel free to reach out directly through
+              email or schedule a consultation.
             </p>
           </div>
         </div>
