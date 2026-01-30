@@ -126,37 +126,39 @@ export default function Contact() {
       <section id="final-cta" className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80" />
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(white,transparent)]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
 
         <div className="relative mx-auto max-w-screen-xl px-5 md:px-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-8">
               Ready to Shift Forward?
             </h2>
 
-            <p className="text-lg text-white/90 mb-12 leading-8">
-              Whether you're modernizing existing systems or building something entirely new, let's 
+            <p className="text-lg md:text-xl text-white/90 mb-16 leading-8">
+              Whether you're modernizing existing systems or building something entirely new, let's
               explore how ZeroShift can help you move faster, smarter, and with confidence.
             </p>
 
             {/* Single consolidated email CTA */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-white/30 p-8 mb-6">
-              <p className="text-white/90 text-sm font-medium mb-4">
-                Get in touch with our team
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 p-12 mb-8 hover:bg-white/15 transition-colors">
+              <p className="text-white/80 text-sm font-medium mb-4 tracking-wide uppercase">
+                Get in touch
               </p>
               <a
                 href="mailto:hello@zeroshift.ae"
-                className="text-3xl md:text-4xl font-bold text-white hover:text-white/90 transition-colors"
+                className="text-4xl md:text-5xl font-extrabold text-white hover:text-white/95 transition-colors block mb-6"
               >
                 hello@zeroshift.ae
               </a>
-              <p className="text-white/70 text-sm mt-4">
+              <p className="text-white/70 text-base">
                 We typically respond within 24 hours
               </p>
             </div>
 
-            {/* Optional: Additional contact methods or info */}
-            <p className="text-white/60 text-sm">
-              For urgent inquiries, feel free to call us directly or schedule a meeting through email.
+            {/* Additional contact methods or info */}
+            <p className="text-white/60 text-sm max-w-xl mx-auto">
+              For urgent inquiries, feel free to reach out directly through email or schedule a consultation.
             </p>
           </div>
         </div>
