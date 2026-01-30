@@ -161,53 +161,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Why ZeroShift */}
-      <section id="why-zeroshift" className="py-24 bg-white">
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-16 text-center">
-            Why ZeroShift
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Founder-Led Delivery",
-                desc: "Senior leadership involved from strategy to execution",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z",
-              },
-              {
-                title: "Enterprise-First Thinking",
-                desc: "Built for scale, governance, and long-term growth",
-                icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5.5m0 0H9.5m0 0H4m0 0h2",
-              },
-              {
-                title: "Technology-Agnostic",
-                desc: "We choose what fits the problem — not what's trendy",
-                icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 000 4m0-2a2 2 0 100 4m0-4a2 2 0 000 4m6-4v2m0-6V4m0 2a2 2 0 100 4m0-4a2 2 0 000 4m0-2a2 2 0 100 4m0-4a2 2 0 000 4m-6 4v2m0-6v2",
-              },
-              {
-                title: "Execution Over Slides",
-                desc: "Real systems, real outcomes, real adoption",
-                icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl border border-slate-200 bg-white p-8 hover:shadow-lg transition-shadow group"
-              >
-                <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors">
-                  <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h4>
-                <p className="text-sm text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Founder & Credibility */}
       <section id="founder-credibility" className="py-24 bg-white">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
