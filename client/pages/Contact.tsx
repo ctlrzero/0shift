@@ -208,35 +208,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* How We Work */}
-      <section id="how-we-work" className="py-24 bg-slate-50">
-        <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-16 text-center">
-            How We Work
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { num: "01", title: "Discover", desc: "Objectives & constraints" },
-              { num: "02", title: "Design", desc: "Architecture & roadmap" },
-              { num: "03", title: "Build & Integrate", desc: "Platforms & automation" },
-              { num: "04", title: "Scale & Optimize", desc: "Continuous improvement" },
-            ].map((step, idx) => (
-              <div key={idx} className="relative">
-                <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 text-center">
-                  <div className="text-5xl font-bold text-primary/20 mb-4">{step.num}</div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h4>
-                  <p className="text-sm text-slate-600">{step.desc}</p>
-                </div>
-                {idx < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-primary/20 transform -translate-y-1/2" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Founder & Credibility */}
       <section id="founder-credibility" className="py-24 bg-white">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
