@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import ContactForm from "@/components/site/ContactForm";
 
 export default function Index() {
   useEffect(() => {
@@ -54,7 +53,7 @@ export default function Index() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="mailto:hello@zeroshift.ae"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Schedule Consultation
@@ -400,7 +399,7 @@ export default function Index() {
 
               <div className="pt-6 border-t border-slate-200">
                 <a
-                  href="#contact"
+                  href="mailto:hello@zeroshift.ae"
                   className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
                 >
                   Explore Integration Options
@@ -640,7 +639,7 @@ export default function Index() {
                   {s.d}
                 </p>
                 <a
-                  href="#contact"
+                  href="mailto:hello@zeroshift.ae"
                   className="mt-4 group/link inline-flex items-center gap-2 text-xs font-semibold text-primary hover:gap-3 transition-all"
                 >
                   Learn more
@@ -707,7 +706,32 @@ export default function Index() {
                 </p>
               </div>
 
-              <ContactForm />
+              <div className="w-full max-w-2xl mx-auto">
+                <div className="flex flex-col items-center gap-8">
+                  <p className="text-lg text-slate-600 text-center">
+                    Send us an email and we'll get back to you within 24 hours.
+                  </p>
+                  <a
+                    href="mailto:hello@zeroshift.ae"
+                    className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary/90 px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-1"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    hello@zeroshift.ae
+                  </a>
+                </div>
+              </div>
 
               <div className="mt-12 border-t border-slate-200 pt-12 grid max-w-3xl gap-4 md:grid-cols-3 text-left mx-auto">
                 <div className="rounded-xl p-5 text-center">
