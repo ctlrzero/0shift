@@ -84,38 +84,28 @@ export default function Contact() {
       {/* Core Value */}
       <section id="core-value" className="py-24 bg-slate-50">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
-                We Don't Just Digitize.{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  We Re-Architect How Things Work.
-                </span>
-              </h2>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
+              We Don't Just Digitize.{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                We Re-Architect How Things Work.
+              </span>
+            </h2>
 
-              <ul className="space-y-4">
-                {[
-                  "Design enterprise-grade digital platforms",
-                  "Replace fragmented systems with unified solutions",
-                  "Automate workflows across people, data, and operations",
-                  "Build scalable foundations using cloud, AI, and modern architecture",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex gap-3 text-slate-700">
-                    <svg className="w-6 h-6 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative hidden md:block">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 flex items-center justify-center min-h-96">
-                <svg className="w-48 h-48 text-primary/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
+            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+              {[
+                "Design enterprise-grade digital platforms",
+                "Replace fragmented systems with unified solutions",
+                "Automate workflows across people, data, and operations",
+                "Build scalable foundations using cloud, AI, and modern architecture",
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-3 text-slate-700 bg-white rounded-xl p-4 border border-slate-100">
+                  <svg className="w-6 h-6 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-base">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -124,45 +114,34 @@ export default function Contact() {
       {/* Founder & Credibility */}
       <section id="founder-credibility" className="py-24 bg-white">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
-                Led by Experience.{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                  Driven by Innovation.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
+              Led by Experience.{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Driven by Innovation.
+              </span>
+            </h2>
+
+            <p className="text-lg text-slate-600 leading-8 mb-10 max-w-2xl mx-auto">
+              ZeroShift is built on deep experience delivering complex digital transformation
+              initiatives across large organizations. Our team brings decades of combined expertise
+              in enterprise architecture, cloud transformation, and intelligent systems.
+            </p>
+
+            <div className="flex flex-wrap gap-3 justify-center">
+              {[
+                "Enterprise Platforms",
+                "Digital Transformation",
+                "Cloud & AI",
+                "Secure Architecture",
+              ].map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="inline-block px-5 py-2.5 rounded-full bg-primary/10 text-primary text-sm font-semibold"
+                >
+                  {tag}
                 </span>
-              </h2>
-
-              <p className="text-lg text-slate-600 leading-8 mb-8">
-                ZeroShift is built on deep experience delivering complex digital transformation 
-                initiatives across large organizations. Our team brings decades of combined expertise 
-                in enterprise architecture, cloud transformation, and intelligent systems.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "Enterprise Platforms",
-                  "Digital Transformation",
-                  "Cloud & AI",
-                  "Secure Architecture",
-                ].map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative hidden md:block">
-              <div className="bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-12 flex items-center justify-center min-h-96">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <p className="text-slate-600 font-semibold">Innovation at Scale</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
