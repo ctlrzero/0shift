@@ -44,26 +44,31 @@ export default function Contact() {
       {/* Core Value */}
       <section id="core-value" className="py-24 bg-slate-50">
         <div className="mx-auto max-w-screen-xl px-5 md:px-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
-              We Don't Just Digitize.{" "}
-              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                We Re-Architect How Things Work.
-              </span>
-            </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
+                We Don't Just Digitize.{" "}
+                <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  We Re-Architect How Things Work.
+                </span>
+              </h2>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                Our approach combines deep expertise with innovative thinking to deliver transformative results.
+              </p>
+            </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-6 text-left">
               {[
                 "Design enterprise-grade digital platforms",
                 "Replace fragmented systems with unified solutions",
                 "Automate workflows across people, data, and operations",
                 "Build scalable foundations using cloud, AI, and modern architecture",
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-3 text-slate-700 bg-white rounded-xl p-4 border border-slate-100">
-                  <svg className="w-6 h-6 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <div key={idx} className="flex gap-4 bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                  <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-base">{item}</span>
+                  <span className="text-base text-slate-700 font-medium">{item}</span>
                 </div>
               ))}
             </div>
